@@ -1,6 +1,6 @@
 import numpy as np
 from collections import defaultdict
-from data_processing import preprocess_data
+from n_gram.data_processing import preprocess_data
 
 class N_gram:
     def __init__(self, text_dir: str):
@@ -83,7 +83,7 @@ class N_gram:
     
 if __name__ == "__main__":
     ngram = N_gram(text_dir="data/quotes.txt")
-    ngram.fit(N=6)
+    ngram.fit(N=7)
     for i in range(5):
         print(ngram.generate())
         print()
