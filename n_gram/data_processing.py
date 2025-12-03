@@ -30,10 +30,9 @@ def preprocess_data(text_corpus, padding=True):
     
     # We create a vocabulary and assign a unique id to each word
     PAD_TOKEN = "<PAD>"
-    UNK_TOKEN = "<UNK>"
     BOS_TOKEN = "<BOS>"
     EOS_TOKEN = "<EOS>"
-    vocab = {PAD_TOKEN:0, UNK_TOKEN:1, BOS_TOKEN:2, EOS_TOKEN:3}
+    vocab = {PAD_TOKEN:0, BOS_TOKEN:1, EOS_TOKEN:2}
     for sentence in tokenized:
         for word in sentence:
             if word not in vocab:
